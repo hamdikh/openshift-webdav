@@ -2,7 +2,9 @@ FROM openshift/base-centos7
 
 RUN yum install -y centos-release-scl.noarch \
  && yum install -y httpd24 \
- && yum clean all
+ && yum clean all \
+ && mkdir -p /var/lib/dav \
+ && chmod g+rwx /var/lib/dav
 
 ADD dav.conf /opt/rh/httpd24/root/etc/httpd/conf/
 USER 1000
