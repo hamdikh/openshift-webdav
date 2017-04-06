@@ -1,5 +1,7 @@
 FROM openshift/base-centos7
 
+ENV APACHE_LISTEN_PORT 8080
+
 RUN yum install -y centos-release-scl.noarch \
  && yum install -y httpd24 \
  && yum clean all \
