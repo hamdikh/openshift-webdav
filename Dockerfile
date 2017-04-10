@@ -1,4 +1,4 @@
-FROM openshift/base-centos7
+FROM centos/s2i-base-centos7
 
 ENV APACHE_LISTEN_PORT 8080
 
